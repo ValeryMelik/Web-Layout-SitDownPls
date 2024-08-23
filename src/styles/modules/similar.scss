@@ -1,0 +1,51 @@
+.similar {
+  &__container {
+    padding-top: 42px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    position: relative;
+
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  li {
+    box-sizing: border-box;
+    display: flex;
+  }
+}
+
+@media (max-width: 1300px) {
+  .similar {
+    &__container {
+      padding-top: 31px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .similar {
+    margin-bottom: 30px;
+
+    &__container {
+      position: relative;
+
+      padding-top: 38px;
+      padding-bottom: 88px;
+    }
+
+    &__title {
+      position: static;
+    }
+
+    &__navigation {
+      top: initial;
+      bottom: 40px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+}

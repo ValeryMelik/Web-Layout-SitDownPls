@@ -1,0 +1,90 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  transition: padding 0.3s ease-in-out, width 0.3s ease-in-out,
+    height 0.3s ease-in-out, gap 0.3s ease-in-out;
+}
+
+body {
+  font: 400 16px / 22px "Open Sans", sans-serif;
+  color: $black;
+
+  background-color: $white;
+}
+
+svg {
+  flex-shrink: 0;
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.img-reset {
+  display: block;
+
+  flex-shrink: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.title-reset {
+  margin: 0;
+  margin-bottom: 26px;
+
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
+}
+
+.btn-reset {
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+.margin-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.list-reset {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-wrapper-reset {
+  box-sizing: border-box !important;
+  height: initial !important;
+}
+
+.swiper-slide-reset {
+  height: initial !important;
+}

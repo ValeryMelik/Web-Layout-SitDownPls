@@ -1,0 +1,90 @@
+section.card
+  .card__container.container 
+    .card__navlink.navlink 
+      +navlinkItem('Главная') 
+      +navlinkItem('Каталог') 
+      +navlinkItem('Диваны') 
+      +navlinkItem('Прямые диваны') 
+      +navlinkItem('D-31') 
+    ul.list-reset.card__content
+      li.card__crimg.crimg
+        picture.crimg__picture
+          source(media='(max-width: 425px)', srcset=`img/card/card-320-1.webp`)
+          source(media='(max-width: 936px)', srcset=`img/card/card-1920-1.webp`)
+          source(media='(max-width: 1150px)', srcset=`img/card/card-1024-1.webp`)
+          img.img-reset(src=`img/card/card-1920-1.webp`, alt="main-picture").crimg__img
+      li.card__crcascad.crcascad
+        .crcascad__item
+          img.img-reset(src="img/card/card-2.webp", alt="pic-1").crcascad__img
+        .crcascad__item
+          img.img-reset(src="img/card/card-3.webp", alt="pic-2").crcascad__img
+        .crcascad__item
+          img.img-reset(src="img/card/card-4.webp", alt="pic-3").crcascad__img
+        .crcascad__item
+          img.img-reset(src="img/card/card-5.webp", alt="pic-4").crcascad__img
+      li.card__crinfo.crinfo
+        .crinfo__bg
+          +svg('star-svg', 'crinfo')
+          span.crinfo__capture 4,8
+        h1.title-reset.crinfo__title Диван тканевый прямой &laquo;D&#8209;31&raquo;
+        p.margin-reset.crinfo__descr Мини 120&nbsp;см без ящика Stark синий (Рогожка)
+        p.margin-reset.crinfo__cost 28&nbsp;490&nbsp;руб
+        button.btn-reset.crinfo__btn.primary-btn-sm Купить в&nbsp;один клик
+        .crinfo__add 
+          button.btn-reset.crinfo__btn-add +&nbsp;Добавить в&nbsp;корзину
+      li.card__crdescr.crdescr
+        h2.title-reset.crdescr__title Опорный механизм
+        p.margin-reset.crdescr__text Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку. 
+        p.margin-reset.crdescr__text Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.
+        img.img-reset(src="img/card/card.webp", alt="schema").crdescr__img
+      li.card__crcharact.crcharact
+        ul.list-reset.crcharact__list-1
+          li.crcharact__item-1 Гарантия
+            span.crcharact__filler
+          li.crcharact__item-1 Артикул
+            span.crcharact__filler
+          li.crcharact__item-1 Длина
+            span.crcharact__filler
+          li.crcharact__item-1 Высота
+            span.crcharact__filler
+          li.crcharact__item-1 Глубина
+            span.crcharact__filler
+          li.crcharact__item-1 Спальное&nbsp;место
+            span.crcharact__filler
+          li.crcharact__item-1 Высота&nbsp;посадки
+            span.crcharact__filler
+          li.crcharact__item-1 Механизм
+            span.crcharact__filler
+          li.crcharact__item-1 Тип&nbsp;обивки
+            span.crcharact__filler
+          li.crcharact__item-1 Цвет
+            span.crcharact__filler
+          li.crcharact__item-1 Наполнитель
+            span.crcharact__filler
+          li.crcharact__item-1 Материал&nbsp;каркаса
+            span.crcharact__filler
+          li.crcharact__item-1 Количество&nbsp;мест
+            span.crcharact__filler
+          li.crcharact__item-1 Категория
+            span.crcharact__filler
+          li.crcharact__item-1 Возврат
+            span.crcharact__filler
+        ul.list-reset.crcharact__list-2
+          li.crcharact__item-2 18&nbsp;месяцев
+          li.crcharact__item-2 AAA41269004
+          li.crcharact__item-2 163&nbsp;см
+          li.crcharact__item-2 90&nbsp;см
+          li.crcharact__item-2 108&nbsp;см
+          li.crcharact__item-2 200&nbsp;см&nbsp;х&nbsp;125&nbsp;см
+          li.crcharact__item-2 45&nbsp;см
+          li.crcharact__item-2 Опорный
+          li.crcharact__item-2 Рогожка
+          li.crcharact__item-2 Синий
+          li.crcharact__item-2 Независимый&nbsp;пружинный&nbsp;блок
+          li.crcharact__item-2 Металл.&nbsp;рама&nbsp;с&nbsp;дерев.&nbsp;латами
+          li.crcharact__item-2 Двухместные
+          li.crcharact__item-2 Прямые&nbsp;тканевые&nbsp;диваны
+          li.crcharact__item-2 Условия
+
+
+

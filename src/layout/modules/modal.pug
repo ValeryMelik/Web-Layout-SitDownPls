@@ -1,0 +1,36 @@
+.modal
+  .modal__container.container 
+    form.modal__mform.mform
+      .mform__filling 
+        +svg('eleph-svg', 'mform')
+        p.margin-reset.mform__capture Спасибо, мы вам перезвоним!
+      button.btn-reset(type='button').mform__close 
+        +svg('close-m-svg', 'mform')
+      h2.title-reset.mform__title Купить в один клик
+      p.margin-reset.mform__descr Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.
+      .input-container 
+        input(id='modal-name' type='text' name='name' placeholder="Как вас зовут?").mform__input
+      .input-container 
+        input(id='modal-phone' type='tel' name='phone' placeholder="Ваш телефон").mform__input
+      button.btn-reset(type='submit').mform__btn.primary-btn-sm Отправить
+      +checkbox-form('mform')
+    .modal__mimg.mimg
+      button.btn-reset(type='button').mimg__close 
+        +svg('close-m-svg', 'mimg')
+      picture.mimg__picture
+        source(media='(max-width: 425px)', srcset=`img/card/modal-card-320-1.webp`)
+        source(media='(max-width: 936px)', srcset=`img/card/modal-card-768-1.webp`)
+        source(media='(max-width: 1150px)', srcset=`img/card/modal-card-1024-1.webp`)
+        img.img-reset(src=`img/card/modal-card-1920-1.webp`, alt="main-picture").mimg__img
+      .mimg__mcascad.mcascad.swiper
+        ul.list-reset.mcascad__list.swiper-wrapper.swiper-wrapper-reset
+          li.mcascad__item.swiper-slide
+            img.img-reset(src="img/card/modal-card-2.webp", alt="pic-1").mcascad__img
+          li.mcascad__item.swiper-slide
+            img.img-reset(src="img/card/modal-card-3.webp", alt="pic-2").mcascad__img
+          li.mcascad__item.swiper-slide
+            img.img-reset(src="img/card/modal-card-4.webp", alt="pic-3").mcascad__img
+          li.mcascad__item.swiper-slide
+            img.img-reset(src="img/card/modal-card-5.webp", alt="pic-4").mcascad__img
+        +arr-btn('mcascad__prev swiper-button-prev') 
+        +arr-btn('mcascad__next swiper-button-next') 

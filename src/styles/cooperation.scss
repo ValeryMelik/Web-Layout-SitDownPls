@@ -1,0 +1,21 @@
+@import "./tools/_variables.scss";
+@import "./tools/_templates.scss";
+@import "./tools/_mixins.scss";
+
+// common styles:
+@import "common/fonts.scss";
+@import "common/normalize.scss";
+@import "common/style-reset.scss";
+
+// extands:
+@import "./extands/container.scss";
+@import "./extands/user-basket.scss";
+@import "./extands/arr-btn.scss";
+@import "./extands/stop-scroll.scss";
+@import "./extands/reset-input.scss";
+@import "./extands/navlink.scss";
+
+// modules:
+@import "modules/header.scss";
+@import 'modules/cooper.scss';
+@import 'modules/footer.scss';

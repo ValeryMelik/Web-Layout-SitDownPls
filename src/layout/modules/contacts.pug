@@ -1,0 +1,21 @@
+section#form-section.contacts 
+  .contacts__container.container
+    .contacts__flexbox
+      form#form-projects.contacts__form
+        h2.title-reset.contacts__title Мы всегда вам рады!
+        p.margin-reset.contacts__descr-t.descr-t 
+          span.descr-t__text Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
+          span.descr-t__tooltip
+            span.descr-t__mark Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+              +svg('popup-arr-svg', 'descr-t')
+        .input-container 
+          input(id='contacts-name' type='text' name='name' placeholder="Как вас зовут?").contacts__input
+        .input-container 
+          input(id='contacts-phone' type='tel' name='phone' placeholder="Ваш телефон").contacts__input
+        .input-container 
+          input(id='contacts-email' type='email' name='email' placeholder="Ваш e-mail").contacts__input
+        button.btn-reset.contacts__btn.primary-btn-sm Отправить
+      picture.contacts__picture
+        source(srcset="img/contacts/contacts-768.webp",media="(max-width: 931px)")
+        img.img-reset(src="img/contacts/contacts-1920.webp", alt='contacts-picture').contacts__img
+    +checkbox-form('contacts')

@@ -1,0 +1,141 @@
+section#market-section.market
+  .market__container.container
+    .market__navlink.navlink
+      +navlinkItem('Главная') 
+      +navlinkItem('Каталог') 
+      +navlinkItem('Диваны') 
+      +navlinkItem('Прямые диваны') 
+    .market__content.content 
+      h1.title-reset.market__title Каталог
+      .market__filter.filter 
+        h3.margin-reset.filter__title 
+          span.filter__caption Фильтровать&nbsp;по:
+          span.filter__caption Фильтры:
+        .filter__block 
+          h4.margin-reset.filter__name Категория
+          ul.list-reset.filter__list 
+            li.filter__item 
+              +checkbox('Диваны')
+            li.filter__item 
+              +checkbox('Кресла')
+            li.filter__item 
+              +checkbox('Пуфы')
+            li.filter__item 
+              +checkbox('Кровати')
+            li.filter__item 
+              +checkbox('Тумбы')
+            li.filter__item 
+              +checkbox('Комоды')
+            li.filter__item 
+              +checkbox('Стулья')
+            li.filter__item 
+              +checkbox('Столы')
+            li.filter__item 
+              +checkbox('Аксессуары')
+        .filter__block
+          h4.margin-reset.filter__name Цена
+          .filter__range.range
+            .range__price
+              label.range__label
+                span.range__caption от
+                input(type='number' min="1" max="200000" value="50000").range__input-num
+              label.range__label
+                span.range__caption до
+                input(type='number' min="1000" max="200000" value="150000").range__input-num
+            .range__slider 
+              .range__progress
+            .range__bar 
+              input(type='range'  min="1000" max="200000" value="50000" step="1000").range__input-bar
+              input(type='range' min="1000" max="200000" value="150000"  step="1000").range__input-bar
+        .filter__block 
+          h4.margin-reset.filter__name Скидка
+          ul.list-reset.filter__list.discount
+            li.filter__item 
+              +checkbox('Более 5 000')
+            li.filter__item 
+              +checkbox('Менее 5 000')
+            li.filter__item 
+              +checkbox('Не важно')
+        .filter__block 
+          h4.margin-reset.filter__name Цвет
+          ul.list-reset.filter__list 
+            li.filter__item 
+              +checkbox('Коричневый')
+            li.filter__item 
+              +checkbox('Черный')
+            li.filter__item 
+              +checkbox('Бежевый')
+            li.filter__item 
+              +checkbox('Серый')
+            li.filter__item 
+              +checkbox('Белый')
+            li.filter__item 
+              +checkbox('Синий')
+            li.filter__item 
+              +checkbox('Оранжевый')
+            li.filter__item 
+              +checkbox('Желтый')
+            li.filter__item 
+              +checkbox('Зеленый')
+        .market__oxford.oxford
+          img.img-reset(src="img/catal/oxford.webp", alt="oxford").oxford__img
+          h3.margin-reset.oxford__title Оксфорд 1950 
+          p.margin-reset.oxford__descr Новая коллекция изысканных кресел
+          button.btn-reset.oxford__btn
+            span.oxford__caption В&nbsp;каталог
+            span.oxford__svg 
+              +svg('rac-svg', 'oxford')
+        .market__empty
+      .market__catalog.catalog.catalog_big.swiper
+        h2.title-reset.catalog__title Каталог
+        .swiper-wrapper.swiper-wrapper-reset
+          .swiper-slide
+            ul.list-reset.catalog__grid
+              +item('5,0', 'Диван кожаный “R\u201194”', 1, '94\u00A0990')
+              +item('4,9', 'Диван апартековый “T\u201175”', 2, '69\u00A0990')
+              +item('4,8', 'Диван тканевый “D\u201131”', 3, '28\u00A0490')
+              +item('4,8', 'Диван велюровый “Y\u201168”', 4, '22\u00A0990')
+              +item('4,8', 'Диван из шинила “W\u201195”', 5, '22\u00A0990')
+              +item('4,8', 'Диван флоковый “G\u201141”', 6, '17\u00A0990')
+              +item('4,8', 'Диван шиниловый “V\u201143””', 7, '19\u00A0990')
+              +item('4,7', 'Диван велюровый “S\u201199”', 8, '19\u00A0990')
+              +item('4,7', 'Диван из кожзама “F\u201185”', 9, '26\u00A0990')
+          .swiper-slide
+            ul.list-reset.catalog__grid
+              +item('4,6', 'Диван флоковый “H\u201164”', 10, '25\u00A0990')
+              +item('4,6', 'Диван флоковый “H\u201158”', 11, '23\u00A0990')
+              +item('4,6', 'Диван из кожзама “R\u201143”', 12, '33\u00A0990')
+              +item('4,6', 'Диван из шинила “С\u201142”', 13, '18\u00A0990')
+              +item('4,6', 'Диван велюровый “U\u201158”', 14, '21\u00A0990')
+              +item('4,5', 'Диван флоковый “F\u201141”', 15, '17\u00A0990')
+              +item('4,5', 'Диван велюровый “R\u201185”', 16, '34\u00A0990')
+              +item('4,5', 'Диван велюровый “S\u201144”', 17, '19\u00A0990')
+              +item('4,4', 'Диван велюровый “С\u201180”', 18, '20\u00A0990')
+        .market__pagination.swiper-pagination
+      .market__catalog.catalog.catalog_small.swiper
+        .swiper-wrapper.swiper-wrapper-reset
+          .swiper-slide
+            ul.list-reset.catalog__grid
+              +item('5,0', 'Диван кожаный “R\u201194”', 1, '94\u00A0990')
+              +item('4,9', 'Диван апартековый “T\u201175”', 2, '69\u00A0990')
+              +item('4,8', 'Диван тканевый “D\u201131”', 3, '28\u00A0490')
+              +item('4,8', 'Диван велюровый “Y\u201168”', 4, '22\u00A0990')
+              +item('4,8', 'Диван из шинила “W\u201195”', 5, '22\u00A0990')
+              +item('4,8', 'Диван флоковый “G\u201141”', 6, '17\u00A0990')
+          .swiper-slide
+            ul.list-reset.catalog__grid
+              +item('4,8', 'Диван шиниловый “V\u201143””', 7, '19\u00A0990')
+              +item('4,7', 'Диван велюровый “S\u201199”', 8, '19\u00A0990')
+              +item('4,7', 'Диван из кожзама “F\u201185”', 9, '26\u00A0990')
+              +item('4,6', 'Диван флоковый “H\u201164”', 10, '25\u00A0990')
+              +item('4,6', 'Диван флоковый “H\u201158”', 11, '23\u00A0990')
+              +item('4,6', 'Диван из кожзама “R\u201143”', 12, '33\u00A0990')
+          .swiper-slide
+            ul.list-reset.catalog__grid
+              +item('4,6', 'Диван из шинила “С\u201142”', 13, '18\u00A0990')
+              +item('4,6', 'Диван велюровый “U\u201158”', 14, '21\u00A0990')
+              +item('4,5', 'Диван флоковый “F\u201141”', 15, '17\u00A0990')
+              +item('4,5', 'Диван велюровый “R\u201185”', 16, '34\u00A0990')
+              +item('4,5', 'Диван велюровый “S\u201144”', 17, '19\u00A0990')
+              +item('4,4', 'Диван велюровый “С\u201180”', 18, '20\u00A0990')
+        .market__pagination.swiper-pagination

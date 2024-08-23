@@ -1,0 +1,82 @@
+.checkbox {
+  user-select: none;
+  cursor: pointer;
+
+  &__input {
+    appearance: none;
+  }
+
+  &__input:checked + &__name {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &__name {
+    position: relative;
+    padding-left: 28px;
+
+  }
+  
+  &__link {
+    color: $primary;
+    text-decoration: underline;
+    @extend %inter-link;
+
+    margin: 0 -3px;
+    padding: 0 3px;
+  }
+
+  &__name:before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    @extend %centerY;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $grey;
+    border-radius: 2px;
+
+    cursor: pointer;
+  }
+
+  &__name:after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    @extend %centerY;
+    z-index: 1;
+
+    width: 20px;
+    height: 20px;
+
+    background: transparent url("../img/sprite.svg#checkbox-svg") center / cover
+      no-repeat;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 500px) {
+  .checkbox {
+    font-size: 12px;
+
+    &__name {
+      padding-left: 20px;
+
+      &::before,
+      &::after {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}

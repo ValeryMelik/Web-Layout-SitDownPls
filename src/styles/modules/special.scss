@@ -1,0 +1,247 @@
+.special {
+  &__block-1 {
+    display: block;
+  }
+
+  &__block-2,
+  &__block-3 {
+    display: none;
+  }
+
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    position: relative;
+  }
+
+  &__grid {
+    @extend %grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    grid-template-areas: "cell-1 cell-1 cell-1 cell-2 cell-2 cell-2 cell-2 cell-2 cell-2 cell-3 cell-3 cell-3";
+  }
+
+  &__cell {
+    box-sizing: border-box;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 30px;
+
+    min-height: 511px;
+
+    background-color: $grey-light;
+    border-radius: 10px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 10px;
+
+    width: 92px;
+    min-height: 34px;
+
+    background: transparent url("../img/special/bg.webp") center left / cover
+      no-repeat;
+  }
+
+  &__capture {
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__img-sm {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    width: 230px;
+    height: 115px;
+  }
+
+  &__img-sm[alt="sofa-2"] {
+    height: 107px;
+  }
+
+  &__img-bl {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    width: initial;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+
+    max-width: 225px;
+
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__cost-bl {
+    display: flex;
+    align-items: end;
+    column-gap: 30px;
+  }
+
+  &__capture-bl {
+    display: block;
+    line-height: 130%;
+  }
+
+  &__capture-bl:first-child {
+    color: $secondary;
+    font-size: 18px;
+  }
+
+  &__capture-bl:last-child {
+    color: $grey;
+
+    text-decoration: line-through;
+  }
+
+  &__btn {
+    margin-top: 23px;
+  }
+}
+
+@media (max-width: 1304px) {
+  .special {
+    &__grid {
+      grid-template-areas: "cell-1 cell-1 cell-1 cell-1 cell-2 cell-2 cell-2 cell-2 cell-3 cell-3 cell-3 cell-3";
+    }
+
+    &__img[alt="sofa-2"] {
+      width: 254px;
+      height: 138px;
+    }
+
+    &__img[alt="sofa-5"] {
+      width: 254px;
+      height: 123px;
+    }
+
+    &__img-sm {
+      display: none;
+    }
+  }
+
+  .sofa-bl-2,
+  .sofa-bl-5 {
+    margin: auto 0;
+  }
+}
+
+@media (max-width: 931px) {
+  .special {
+    &__block-1 {
+      display: none;
+    }
+
+    &__block-2 {
+      display: block;
+    }
+
+    &__grid {
+      grid-template-areas: "cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-2 cell-2 cell-2 cell-2 cell-2 cell-2";
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  .special {
+    &__subtitle {
+      display: block;
+    }
+
+    &__grid {
+      gap: calc($gap / 2);
+    }
+
+    &__img[alt="sofa-2"] {
+      width: 210px;
+      height: 114px;
+    }
+
+    &__img[alt="sofa-5"] {
+      width: 206px;
+      height: 98px;
+    }
+
+    &__cost-bl {
+      column-gap: 12px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .special {
+    &__block-2 {
+      display: none;
+    }
+
+    &__block-3 {
+      display: block;
+    }
+
+    &__container {
+      position: relative;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    &__title {
+      position: static;
+    }
+
+    &__grid {
+      grid-template-areas: "cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-1 cell-1";
+    }
+
+    &__cost-bl {
+      column-gap: 30px;
+    }
+
+    &__img[alt="sofa-2"] {
+      width: 254px;
+      height: 138px;
+    }
+
+    &__img[alt="sofa-5"] {
+      width: 254px;
+      height: 123px;
+    }
+
+    &__navigation {
+      display: block;
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

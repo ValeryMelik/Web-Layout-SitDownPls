@@ -1,0 +1,113 @@
+mixin svg(id, parent)
+  svg(class=`${parent}__${id}`): use(xlink:href=`img/sprite.svg#${id}`)
+
+mixin ItemLink(itemClass, linkClass, text, idLink)
+  li(class=itemClass)
+    if (!idLink)
+      a.link-reset(class=linkClass href="#")=text
+    else
+      a.link-reset(class=linkClass href="#" id=idLink)=text
+
+mixin linkInItem(itemClass, linkClass, linkId, text)
+  li(class=itemClass)
+    a.link-reset(class=linkClass href="#" id=`${linkId}-link`)=text
+
+mixin user-basket(blockIndex)
+  div(class=`${blockIndex}-block__usr-bsk`).usr-bsk
+    a.link-reset(href="#").usr-bsk__usr
+      +svg('user-svg', 'usr-bsk')
+    a.link-reset(href="#").usr-bsk__bsk
+      span.usr-bsk__num 0
+      +svg('basket-svg', 'usr-bsk')
+
+mixin hero-slider(title, btn, slideNum)
+  .swiper-slide.swiper-slide-reset
+    picture.hero__picture
+      source(srcset=`img/hero/hero-320-${slideNum}.webp`,media="(max-width: 350px)")
+      source(srcset=`img/hero/hero-768-${slideNum}.webp`,media="(max-width: 768px)")
+      source(srcset=`img/hero/hero-1024-${slideNum}.webp`,media="(max-width: 1024px)")
+      img.img-reset(src=`img/hero/hero-1920-${slideNum}.webp`, alt=`hero-picture-${slideNum}`).hero__img
+    .hero__container.container
+      if (slideNum==1) 
+        h1.title-reset.hero__title=title
+        button.btn-reset.hero__btn.primary-btn=btn
+      else
+        if (slideNum==3)
+          h2.title-reset.hero__title.hero__title_white=title
+          button.btn-reset.hero__btn.primary-btn=btn
+        else
+          h2.title-reset.hero__title=title
+          button.btn-reset.hero__btn.primary-btn=btn
+
+mixin special-item(discount, name, img, newprice, oldprice)
+  li.special__cell
+    .special__bg
+      span.special__capture=`-\u00A0${discount}`
+    div(class=`sofa-bl-${img}`).special__img-bl
+      img.img-reset(src=`img/special/special-${img}.webp`, alt=`sofa-${img}`).special__img
+    p.margin-reset.special__descr=name
+    .special__cost-bl 
+      span.special__capture-bl=`${newprice}\u00A0руб`
+      span.special__capture-bl=`${oldprice}\u00A0руб`
+    button.btn-reset.special__btn.secondary-btn Купить
+    if (img==2 || img==5)
+      img.img-reset(src=`img/sprite.svg#special-${img}-svg`, alt=`sofa-${img}`, class='special__img-sm')
+
+mixin item(score, name, img, price, cellClass='')
+  li(class=`${cellClass}`).cell
+    .cell__bg
+      +svg('star-svg', 'cell')
+      span.cell__score=score
+    .cell__box
+      img.img-reset(src=`img/rating/rating-${img}.webp`, alt=`sof-${img}`)
+    p.margin-reset.cell__descr=name
+    .cell__cost=`${price}\u00A0руб`
+    button.btn-reset.cell__btn.secondary-btn Купить
+
+mixin top-item(cat1, cat2, name, img, cat3='')
+  li(class=`top-cell-${img}`).top__cell
+    .top__category 
+      span.top__capture=cat1
+      span.top__capture=cat2
+      span.top__capture=cat3 
+    h3.margin-reset.margin-reset.top__name
+      span.top__ttl=name
+      button.btn-reset.top__btn.top__btn_media.btn-block
+        span.btn-block__svg
+          +svg('rac-svg', 'btn-block') 
+    picture(class=`top__picture_${img}`).top__picture 
+      source(srcset=`img/top/top-320-${img}.webp`,media="(max-width: 420px)")
+      if (img!=1)
+        source(srcset=`img/top/top-1024-${img}.webp`,media="(max-width: 1304px)")
+      img.img-reset(src=`img/top/top-1920-${img}.webp`, alt=`top-sof-${img}`).top__img 
+    button.btn-reset.top__btn.top__btn_perm.btn-block
+      span.btn-block__name В&nbsp;каталог
+      span.btn-block__svg
+        +svg('rac-svg', 'btn-block') 
+
+mixin useful-slider(num, descr)
+  li.useful__item.swiper-slide
+    article.useful__article
+      picture.useful__picture
+        source(srcset=`img/useful/useful-1024-${num}.webp`,media="(max-width: 1024px)")
+        img.img-reset(src=`img/useful/useful-1920-${num}.webp` alt=`picture-${num}`)
+      h3.margin-reset.useful__descr=descr
+      button.btn-reset.useful__btn.secondary-btn Читать
+
+mixin arr-btn(btnClass) 
+  button.btn-reset(type="submit" class=btnClass).arr-btn
+    +svg('rac-svg', 'arr-btn')
+
+mixin checkbox-form(section)
+  label(class=`${section}__checkbox`).checkbox
+    input(type="checkbox", name="agreement", checked).checkbox__input
+    span.checkbox__name Принимаю&nbsp;#[a.link-reset.checkbox__link(href="#") пользовательское&nbsp;соглашение]
+
+mixin checkbox(name)
+  label.checkbox
+    input(type="checkbox", name=name).checkbox__input
+    span.checkbox__name=name
+
+mixin navlinkItem(name)
+  a.link-reset(href='#').navlink__link=name
+  span.navlink__slash /
